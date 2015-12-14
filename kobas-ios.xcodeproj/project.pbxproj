@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */; };
+		BC43C9131C1F08C8001DF1C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9121C1F08C8001DF1C2 /* ViewController.swift */; };
+		BC43C9161C1F08C8001DF1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9141C1F08C8001DF1C2 /* Main.storyboard */; };
+		BC43C9181C1F08C8001DF1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9171C1F08C8001DF1C2 /* Assets.xcassets */; };
+		BC43C91B1C1F08C8001DF1C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9191C1F08C8001DF1C2 /* LaunchScreen.storyboard */; };
+		BC43C9261C1F08C8001DF1C2 /* kobas_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9251C1F08C8001DF1C2 /* kobas_iosTests.swift */; };
+		BC43C9311C1F08C8001DF1C2 /* kobas_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9301C1F08C8001DF1C2 /* kobas_iosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC43C9221C1F08C8001DF1C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC43C9051C1F08C8001DF1C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC43C90C1C1F08C8001DF1C2;
+			remoteInfo = "kobas-ios";
+		};
+		BC43C92D1C1F08C8001DF1C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC43C9051C1F08C8001DF1C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC43C90C1C1F08C8001DF1C2;
+			remoteInfo = "kobas-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC43C90D1C1F08C8001DF1C2 /* kobas-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kobas-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC43C9121C1F08C8001DF1C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC43C9151C1F08C8001DF1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC43C9171C1F08C8001DF1C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC43C91A1C1F08C8001DF1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC43C91C1C1F08C8001DF1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC43C9211C1F08C8001DF1C2 /* kobas-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobas-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC43C9251C1F08C8001DF1C2 /* kobas_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kobas_iosTests.swift; sourceTree = "<group>"; };
+		BC43C9271C1F08C8001DF1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC43C92C1C1F08C8001DF1C2 /* kobas-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobas-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC43C9301C1F08C8001DF1C2 /* kobas_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kobas_iosUITests.swift; sourceTree = "<group>"; };
+		BC43C9321C1F08C8001DF1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC43C90A1C1F08C8001DF1C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC43C91E1C1F08C8001DF1C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC43C9291C1F08C8001DF1C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC43C9041C1F08C8001DF1C2 = {
+			isa = PBXGroup;
+			children = (
+				BC43C90F1C1F08C8001DF1C2 /* kobas-ios */,
+				BC43C9241C1F08C8001DF1C2 /* kobas-iosTests */,
+				BC43C92F1C1F08C8001DF1C2 /* kobas-iosUITests */,
+				BC43C90E1C1F08C8001DF1C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC43C90E1C1F08C8001DF1C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC43C90D1C1F08C8001DF1C2 /* kobas-ios.app */,
+				BC43C9211C1F08C8001DF1C2 /* kobas-iosTests.xctest */,
+				BC43C92C1C1F08C8001DF1C2 /* kobas-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC43C90F1C1F08C8001DF1C2 /* kobas-ios */ = {
+			isa = PBXGroup;
+			children = (
+				BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */,
+				BC43C9121C1F08C8001DF1C2 /* ViewController.swift */,
+				BC43C9141C1F08C8001DF1C2 /* Main.storyboard */,
+				BC43C9171C1F08C8001DF1C2 /* Assets.xcassets */,
+				BC43C9191C1F08C8001DF1C2 /* LaunchScreen.storyboard */,
+				BC43C91C1C1F08C8001DF1C2 /* Info.plist */,
+			);
+			path = "kobas-ios";
+			sourceTree = "<group>";
+		};
+		BC43C9241C1F08C8001DF1C2 /* kobas-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC43C9251C1F08C8001DF1C2 /* kobas_iosTests.swift */,
+				BC43C9271C1F08C8001DF1C2 /* Info.plist */,
+			);
+			path = "kobas-iosTests";
+			sourceTree = "<group>";
+		};
+		BC43C92F1C1F08C8001DF1C2 /* kobas-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC43C9301C1F08C8001DF1C2 /* kobas_iosUITests.swift */,
+				BC43C9321C1F08C8001DF1C2 /* Info.plist */,
+			);
+			path = "kobas-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC43C90C1C1F08C8001DF1C2 /* kobas-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC43C9351C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-ios" */;
+			buildPhases = (
+				BC43C9091C1F08C8001DF1C2 /* Sources */,
+				BC43C90A1C1F08C8001DF1C2 /* Frameworks */,
+				BC43C90B1C1F08C8001DF1C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kobas-ios";
+			productName = "kobas-ios";
+			productReference = BC43C90D1C1F08C8001DF1C2 /* kobas-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC43C9201C1F08C8001DF1C2 /* kobas-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC43C9381C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-iosTests" */;
+			buildPhases = (
+				BC43C91D1C1F08C8001DF1C2 /* Sources */,
+				BC43C91E1C1F08C8001DF1C2 /* Frameworks */,
+				BC43C91F1C1F08C8001DF1C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC43C9231C1F08C8001DF1C2 /* PBXTargetDependency */,
+			);
+			name = "kobas-iosTests";
+			productName = "kobas-iosTests";
+			productReference = BC43C9211C1F08C8001DF1C2 /* kobas-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC43C92B1C1F08C8001DF1C2 /* kobas-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC43C93B1C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-iosUITests" */;
+			buildPhases = (
+				BC43C9281C1F08C8001DF1C2 /* Sources */,
+				BC43C9291C1F08C8001DF1C2 /* Frameworks */,
+				BC43C92A1C1F08C8001DF1C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC43C92E1C1F08C8001DF1C2 /* PBXTargetDependency */,
+			);
+			name = "kobas-iosUITests";
+			productName = "kobas-iosUITests";
+			productReference = BC43C92C1C1F08C8001DF1C2 /* kobas-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC43C9051C1F08C8001DF1C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Alex Forbes-Reed";
+				TargetAttributes = {
+					BC43C90C1C1F08C8001DF1C2 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					BC43C9201C1F08C8001DF1C2 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BC43C90C1C1F08C8001DF1C2;
+					};
+					BC43C92B1C1F08C8001DF1C2 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BC43C90C1C1F08C8001DF1C2;
+					};
+				};
+			};
+			buildConfigurationList = BC43C9081C1F08C8001DF1C2 /* Build configuration list for PBXProject "kobas-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC43C9041C1F08C8001DF1C2;
+			productRefGroup = BC43C90E1C1F08C8001DF1C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC43C90C1C1F08C8001DF1C2 /* kobas-ios */,
+				BC43C9201C1F08C8001DF1C2 /* kobas-iosTests */,
+				BC43C92B1C1F08C8001DF1C2 /* kobas-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC43C90B1C1F08C8001DF1C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC43C91B1C1F08C8001DF1C2 /* LaunchScreen.storyboard in Resources */,
+				BC43C9181C1F08C8001DF1C2 /* Assets.xcassets in Resources */,
+				BC43C9161C1F08C8001DF1C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC43C91F1C1F08C8001DF1C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC43C92A1C1F08C8001DF1C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC43C9091C1F08C8001DF1C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC43C9131C1F08C8001DF1C2 /* ViewController.swift in Sources */,
+				BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC43C91D1C1F08C8001DF1C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC43C9261C1F08C8001DF1C2 /* kobas_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC43C9281C1F08C8001DF1C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC43C9311C1F08C8001DF1C2 /* kobas_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC43C9231C1F08C8001DF1C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC43C90C1C1F08C8001DF1C2 /* kobas-ios */;
+			targetProxy = BC43C9221C1F08C8001DF1C2 /* PBXContainerItemProxy */;
+		};
+		BC43C92E1C1F08C8001DF1C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC43C90C1C1F08C8001DF1C2 /* kobas-ios */;
+			targetProxy = BC43C92D1C1F08C8001DF1C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC43C9141C1F08C8001DF1C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC43C9151C1F08C8001DF1C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC43C9191C1F08C8001DF1C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC43C91A1C1F08C8001DF1C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC43C9331C1F08C8001DF1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC43C9341C1F08C8001DF1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC43C9361C1F08C8001DF1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "kobas-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-xdeafcafe.kobas-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC43C9371C1F08C8001DF1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "kobas-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-xdeafcafe.kobas-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BC43C9391C1F08C8001DF1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "kobas-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-xdeafcafe.kobas-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kobas-ios.app/kobas-ios";
+			};
+			name = Debug;
+		};
+		BC43C93A1C1F08C8001DF1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "kobas-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-xdeafcafe.kobas-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kobas-ios.app/kobas-ios";
+			};
+			name = Release;
+		};
+		BC43C93C1C1F08C8001DF1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "kobas-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-xdeafcafe.kobas-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "kobas-ios";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BC43C93D1C1F08C8001DF1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "kobas-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-xdeafcafe.kobas-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "kobas-ios";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC43C9081C1F08C8001DF1C2 /* Build configuration list for PBXProject "kobas-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC43C9331C1F08C8001DF1C2 /* Debug */,
+				BC43C9341C1F08C8001DF1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC43C9351C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC43C9361C1F08C8001DF1C2 /* Debug */,
+				BC43C9371C1F08C8001DF1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC43C9381C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC43C9391C1F08C8001DF1C2 /* Debug */,
+				BC43C93A1C1F08C8001DF1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC43C93B1C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC43C93C1C1F08C8001DF1C2 /* Debug */,
+				BC43C93D1C1F08C8001DF1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC43C9051C1F08C8001DF1C2 /* Project object */;
+}
