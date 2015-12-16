@@ -3,17 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6123120EB72960AA3B06D1E9 /* Pods.framework */; };
 		BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */; };
-		BC43C9131C1F08C8001DF1C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9121C1F08C8001DF1C2 /* ViewController.swift */; };
+		BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */; };
 		BC43C9161C1F08C8001DF1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9141C1F08C8001DF1C2 /* Main.storyboard */; };
 		BC43C9181C1F08C8001DF1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9171C1F08C8001DF1C2 /* Assets.xcassets */; };
 		BC43C91B1C1F08C8001DF1C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9191C1F08C8001DF1C2 /* LaunchScreen.storyboard */; };
 		BC43C9261C1F08C8001DF1C2 /* kobas_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9251C1F08C8001DF1C2 /* kobas_iosTests.swift */; };
 		BC43C9311C1F08C8001DF1C2 /* kobas_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9301C1F08C8001DF1C2 /* kobas_iosUITests.swift */; };
+		BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */; };
+		BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */; };
+		BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */; };
+		BCF6CC4F1C210EAC005D81B3 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140CEE9231D0484CC0F892D4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		564C0BA0DFE814C90F4F4B02 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6123120EB72960AA3B06D1E9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC43C90D1C1F08C8001DF1C2 /* kobas-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kobas-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC43C9121C1F08C8001DF1C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC43C9151C1F08C8001DF1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC43C9171C1F08C8001DF1C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC43C91A1C1F08C8001DF1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		BC43C92C1C1F08C8001DF1C2 /* kobas-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobas-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC43C9301C1F08C8001DF1C2 /* kobas_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kobas_iosUITests.swift; sourceTree = "<group>"; };
 		BC43C9321C1F08C8001DF1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasApiClient.swift; sourceTree = "<group>"; };
+		BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = "Pods/../build/Debug-iphoneos/SwiftHTTP.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF6CC4F1C210EAC005D81B3 /* SwiftHTTP.framework in Frameworks */,
+				08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B51FFCC56067C7A4CAEE6E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				140CEE9231D0484CC0F892D4 /* Pods.debug.xcconfig */,
+				564C0BA0DFE814C90F4F4B02 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		746D4A0F6105D80916B03918 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */,
+				6123120EB72960AA3B06D1E9 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC43C9041C1F08C8001DF1C2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +113,8 @@
 				BC43C9241C1F08C8001DF1C2 /* kobas-iosTests */,
 				BC43C92F1C1F08C8001DF1C2 /* kobas-iosUITests */,
 				BC43C90E1C1F08C8001DF1C2 /* Products */,
+				3B51FFCC56067C7A4CAEE6E4 /* Pods */,
+				746D4A0F6105D80916B03918 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +131,10 @@
 		BC43C90F1C1F08C8001DF1C2 /* kobas-ios */ = {
 			isa = PBXGroup;
 			children = (
+				BC5C66F31C20FF73009FD7A6 /* Api */,
+				BC5C66F01C20F833009FD7A6 /* Controllers */,
+				BC5C66EF1C20928E009FD7A6 /* Models */,
 				BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */,
-				BC43C9121C1F08C8001DF1C2 /* ViewController.swift */,
 				BC43C9141C1F08C8001DF1C2 /* Main.storyboard */,
 				BC43C9171C1F08C8001DF1C2 /* Assets.xcassets */,
 				BC43C9191C1F08C8001DF1C2 /* LaunchScreen.storyboard */,
@@ -125,6 +161,31 @@
 			path = "kobas-iosUITests";
 			sourceTree = "<group>";
 		};
+		BC5C66EF1C20928E009FD7A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BC5C66F01C20F833009FD7A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */,
+				BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BC5C66F31C20FF73009FD7A6 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */,
+			);
+			name = Api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC43C9351C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-ios" */;
 			buildPhases = (
+				14435932F2BE75A31510FE4B /* Check Pods Manifest.lock */,
 				BC43C9091C1F08C8001DF1C2 /* Sources */,
 				BC43C90A1C1F08C8001DF1C2 /* Frameworks */,
 				BC43C90B1C1F08C8001DF1C2 /* Resources */,
+				7E5C6C0EF64AEBB4329AF7D4 /* Embed Pods Frameworks */,
+				731642FAA1D0485E08C57B0C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,7 +269,7 @@
 				};
 			};
 			buildConfigurationList = BC43C9081C1F08C8001DF1C2 /* Build configuration list for PBXProject "kobas-ios" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -251,13 +315,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14435932F2BE75A31510FE4B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		731642FAA1D0485E08C57B0C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E5C6C0EF64AEBB4329AF7D4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC43C9091C1F08C8001DF1C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC43C9131C1F08C8001DF1C2 /* ViewController.swift in Sources */,
+				BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */,
+				BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */,
+				BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */,
 				BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */,
+				BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +510,14 @@
 		};
 		BC43C9361C1F08C8001DF1C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140CEE9231D0484CC0F892D4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "kobas-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-xdeafcafe.kobas-ios";
@@ -406,8 +527,14 @@
 		};
 		BC43C9371C1F08C8001DF1C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 564C0BA0DFE814C90F4F4B02 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "kobas-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-xdeafcafe.kobas-ios";
@@ -482,6 +609,7 @@
 				BC43C9371C1F08C8001DF1C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC43C9381C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +618,7 @@
 				BC43C93A1C1F08C8001DF1C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC43C93B1C1F08C8001DF1C2 /* Build configuration list for PBXNativeTarget "kobas-iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +627,7 @@
 				BC43C93D1C1F08C8001DF1C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
