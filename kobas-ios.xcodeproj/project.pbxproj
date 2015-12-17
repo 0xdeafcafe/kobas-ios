@@ -18,7 +18,10 @@
 		BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */; };
 		BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */; };
 		BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */; };
+		BCE8BFD61C211E49005AB1D9 /* StringHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFD51C211E49005AB1D9 /* StringHelpers.swift */; };
 		BCE8BFDA1C225E98005AB1D9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */; };
+		BCE8BFDD1C2261B8005AB1D9 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDC1C2261B8005AB1D9 /* StringExtentions.swift */; };
+		BCE8BFDF1C226DBE005AB1D9 /* NSDateExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +61,11 @@
 		BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasApiClient.swift; sourceTree = "<group>"; };
+		BCE8BFD51C211E49005AB1D9 /* StringHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelpers.swift; sourceTree = "<group>"; };
 		BCE8BFD71C225DCC005AB1D9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		BCE8BFDC1C2261B8005AB1D9 /* StringExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
+		BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtentions.swift; sourceTree = "<group>"; };
 		BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = "Pods/../build/Debug-iphoneos/SwiftHTTP.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,8 @@
 		BC43C90F1C1F08C8001DF1C2 /* kobas-ios */ = {
 			isa = PBXGroup;
 			children = (
+				BCE8BFDB1C2261AE005AB1D9 /* Extentions */,
+				BCE8BFD41C211E3C005AB1D9 /* Helpers */,
 				BC5C66F31C20FF73009FD7A6 /* Api */,
 				BC5C66F01C20F833009FD7A6 /* Controllers */,
 				BC5C66EF1C20928E009FD7A6 /* Models */,
@@ -188,6 +196,23 @@
 				BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */,
 			);
 			name = Api;
+			sourceTree = "<group>";
+		};
+		BCE8BFD41C211E3C005AB1D9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BCE8BFD51C211E49005AB1D9 /* StringHelpers.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		BCE8BFDB1C2261AE005AB1D9 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BCE8BFDC1C2261B8005AB1D9 /* StringExtentions.swift */,
+				BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */,
+			);
+			name = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,7 +398,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */,
+				BCE8BFDF1C226DBE005AB1D9 /* NSDateExtentions.swift in Sources */,
 				BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */,
+				BCE8BFDD1C2261B8005AB1D9 /* StringExtentions.swift in Sources */,
+				BCE8BFD61C211E49005AB1D9 /* StringHelpers.swift in Sources */,
 				BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */,
 				BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */,
 				BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */,
