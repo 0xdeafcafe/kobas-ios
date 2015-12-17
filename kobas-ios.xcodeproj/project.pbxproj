@@ -18,7 +18,7 @@
 		BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */; };
 		BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */; };
 		BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */; };
-		BCF6CC4F1C210EAC005D81B3 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */; };
+		BCE8BFDA1C225E98005AB1D9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +58,8 @@
 		BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasApiClient.swift; sourceTree = "<group>"; };
+		BCE8BFD71C225DCC005AB1D9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = "Pods/../build/Debug-iphoneos/SwiftHTTP.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCF6CC4F1C210EAC005D81B3 /* SwiftHTTP.framework in Frameworks */,
+				BCE8BFDA1C225E98005AB1D9 /* Alamofire.framework in Frameworks */,
 				08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +102,8 @@
 		746D4A0F6105D80916B03918 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */,
+				BCE8BFD71C225DCC005AB1D9 /* Alamofire.framework */,
 				BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */,
 				6123120EB72960AA3B06D1E9 /* Pods.framework */,
 			);
