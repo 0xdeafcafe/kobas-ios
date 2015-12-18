@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6123120EB72960AA3B06D1E9 /* Pods.framework */; };
+		BC24D6AC1C23B83F00016FC1 /* ArrayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */; };
 		BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */; };
 		BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */; };
 		BC43C9161C1F08C8001DF1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9141C1F08C8001DF1C2 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		BCE8BFDA1C225E98005AB1D9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */; };
 		BCE8BFDD1C2261B8005AB1D9 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDC1C2261B8005AB1D9 /* StringExtentions.swift */; };
 		BCE8BFDF1C226DBE005AB1D9 /* NSDateExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */; };
+		BCE8BFE21C230636005AB1D9 /* KobasStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFE11C230636005AB1D9 /* KobasStaff.swift */; };
+		BCE8BFE41C2309F9005AB1D9 /* SingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFE31C2309F9005AB1D9 /* SingleResponse.swift */; };
+		BCE8BFE61C23B341005AB1D9 /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8BFE51C23B341005AB1D9 /* JSONJoy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,7 @@
 		140CEE9231D0484CC0F892D4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		564C0BA0DFE814C90F4F4B02 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6123120EB72960AA3B06D1E9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponse.swift; sourceTree = "<group>"; };
 		BC43C90D1C1F08C8001DF1C2 /* kobas-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kobas-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		BCE8BFDC1C2261B8005AB1D9 /* StringExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtentions.swift; sourceTree = "<group>"; };
+		BCE8BFE11C230636005AB1D9 /* KobasStaff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasStaff.swift; sourceTree = "<group>"; };
+		BCE8BFE31C2309F9005AB1D9 /* SingleResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResponse.swift; sourceTree = "<group>"; };
+		BCE8BFE51C23B341005AB1D9 /* JSONJoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONJoy.framework; path = "Pods/../build/Debug-iphoneos/JSONJoy.framework"; sourceTree = "<group>"; };
 		BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = "Pods/../build/Debug-iphoneos/SwiftHTTP.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE8BFE61C23B341005AB1D9 /* JSONJoy.framework in Frameworks */,
 				BCE8BFDA1C225E98005AB1D9 /* Alamofire.framework in Frameworks */,
 				08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */,
 			);
@@ -108,6 +117,7 @@
 		746D4A0F6105D80916B03918 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCE8BFE51C23B341005AB1D9 /* JSONJoy.framework */,
 				BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */,
 				BCE8BFD71C225DCC005AB1D9 /* Alamofire.framework */,
 				BCF6CC4E1C210EAC005D81B3 /* SwiftHTTP.framework */,
@@ -193,6 +203,7 @@
 		BC5C66F31C20FF73009FD7A6 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				BCE8BFE01C230624005AB1D9 /* Models */,
 				BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */,
 			);
 			name = Api;
@@ -213,6 +224,16 @@
 				BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */,
 			);
 			name = Extentions;
+			sourceTree = "<group>";
+		};
+		BCE8BFE01C230624005AB1D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCE8BFE11C230636005AB1D9 /* KobasStaff.swift */,
+				BCE8BFE31C2309F9005AB1D9 /* SingleResponse.swift */,
+				BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,13 +419,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */,
+				BC24D6AC1C23B83F00016FC1 /* ArrayResponse.swift in Sources */,
 				BCE8BFDF1C226DBE005AB1D9 /* NSDateExtentions.swift in Sources */,
 				BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */,
 				BCE8BFDD1C2261B8005AB1D9 /* StringExtentions.swift in Sources */,
+				BCE8BFE41C2309F9005AB1D9 /* SingleResponse.swift in Sources */,
 				BCE8BFD61C211E49005AB1D9 /* StringHelpers.swift in Sources */,
 				BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */,
 				BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */,
 				BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */,
+				BCE8BFE21C230636005AB1D9 /* KobasStaff.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

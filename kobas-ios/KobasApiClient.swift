@@ -8,11 +8,12 @@
 
 import Foundation
 import Alamofire
+import JSONJoy
 
 class KobasApiClient {
 	private let ApiBaseUrl : String = "https://login.kobas.co.uk/"
 	private let ApiLoginEndpoint : String = "index.php"
-	private let ApiStaffEndpoint : String = "data/staff/"
+	private let ApiStaffEndpoint : String = "data/staff"
 	
 	private var kobasAuthenticationCookie : String? = nil
 	private var kobasAuthenticationCookieExpiry : NSDate? = nil
@@ -33,8 +34,9 @@ class KobasApiClient {
 			"Accept": "application/json"
 		]
 		
-		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint, headers: headers).responseString { response in
-			print(response.result.value)
+		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint, headers: headers).responseJSON { response in
+			let x = ArrayResponse<KobasStaff>(JSONDecoder(response.data!))
+			print(x)
 		}
 	}
 	
@@ -46,7 +48,7 @@ class KobasApiClient {
 			"Accept": "application/json"
 		]
 		
-		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint + String(staffId), headers: headers).responseString { response in
+		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint + "/" + String(staffId), headers: headers).responseString { response in
 			print(response.result.value)
 		}
 	}
@@ -80,8 +82,6 @@ class KobasApiClient {
 				self.companyId = loginModel.companyIdentifier
 				self.username = loginModel.username
 				self.password = loginModel.password
-				
-				self.getStaff(1337)
 				
 				Completion(result: true, error: nil)
 			}

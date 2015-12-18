@@ -39,6 +39,7 @@ class LoginViewController: UIViewController {
 				// look into error code
 			} else {
 				// party!
+				AppDelegate.kobasApiClient.getStaff()
 			}
 		})
 	}
