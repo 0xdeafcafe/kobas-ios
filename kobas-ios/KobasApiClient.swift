@@ -26,7 +26,7 @@ class KobasApiClient {
 		// TODO: above variables from storage
 	}
 	
-	func getStaff() {
+	func getStaff(Completion: (result: ArrayResponse<KobasStaff>, error: Int?) -> ()) -> Void {
 		self.clearCookies()
 		
 		let headers = [
@@ -36,11 +36,11 @@ class KobasApiClient {
 		
 		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint, headers: headers).responseJSON { response in
 			let x = ArrayResponse<KobasStaff>(JSONDecoder(response.data!))
-			print(x)
+			Completion(result: x, error: nil)
 		}
 	}
 	
-	func getStaff(staffId : Int) {
+	func getStaff(staffId : Int, Completion: (result: SingleResponse<KobasStaff>, error: Int?) -> ()) -> Void {
 		self.clearCookies()
 		
 		let headers = [
@@ -48,12 +48,13 @@ class KobasApiClient {
 			"Accept": "application/json"
 		]
 		
-		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint + "/" + String(staffId), headers: headers).responseString { response in
-			print(response.result.value)
+		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint + "/" + String(staffId), headers: headers).responseJSON { response in
+			let x = SingleResponse<KobasStaff>(JSONDecoder(response.data!))
+			Completion(result: x, error: nil)
 		}
 	}
 	
-	func authenticate(loginModel: LoginModel, Completion: (result: Bool, error: Int?)->()) -> Void {
+	func authenticate(loginModel: LoginModel, Completion: (result: Bool, error: Int?) -> ()) -> Void {
 		let params = [
 			"companyid": String(loginModel.companyIdentifier),
 			"username": loginModel.username,
