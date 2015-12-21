@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6123120EB72960AA3B06D1E9 /* Pods.framework */; };
 		BC24D6AC1C23B83F00016FC1 /* ArrayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */; };
+		BC24D6AE1C27926400016FC1 /* KobasAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24D6AD1C27926400016FC1 /* KobasAuthenticationResponse.swift */; };
 		BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */; };
 		BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */; };
 		BC43C9161C1F08C8001DF1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9141C1F08C8001DF1C2 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		564C0BA0DFE814C90F4F4B02 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6123120EB72960AA3B06D1E9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponse.swift; sourceTree = "<group>"; };
+		BC24D6AD1C27926400016FC1 /* KobasAuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasAuthenticationResponse.swift; sourceTree = "<group>"; };
 		BC43C90D1C1F08C8001DF1C2 /* kobas-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kobas-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				BCE8BFE11C230636005AB1D9 /* KobasStaff.swift */,
 				BCE8BFE31C2309F9005AB1D9 /* SingleResponse.swift */,
 				BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */,
+				BC24D6AD1C27926400016FC1 /* KobasAuthenticationResponse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */,
+				BC24D6AE1C27926400016FC1 /* KobasAuthenticationResponse.swift in Sources */,
 				BC24D6AC1C23B83F00016FC1 /* ArrayResponse.swift in Sources */,
 				BCE8BFDF1C226DBE005AB1D9 /* NSDateExtensions.swift in Sources */,
 				BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */,
