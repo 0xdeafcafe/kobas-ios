@@ -31,7 +31,7 @@ class KobasApiClient {
 		static let passwordKey = "ClientPassword"
 		static let kobasAuthenticationCookieKey = "ClientKobasAuthenticationCookie"
 		static let kobasAuthenticationExpiryKey = "ClientKobasAuthenticationExpiry"
-		static let kobasStaff = "ClientKobasStaff"
+		static let kobasStaffKey = "ClientKobasStaff"
 	}
 	
 	init() {
@@ -43,7 +43,7 @@ class KobasApiClient {
 		   let password = defaults.stringForKey(ClientSettingsKeys.passwordKey),
 		   let kobasAuthenticationCookie = defaults.stringForKey(ClientSettingsKeys.kobasAuthenticationCookieKey),
 		   let kobasAuthenticationExpiry = defaults.stringForKey(ClientSettingsKeys.kobasAuthenticationExpiryKey),
-		   let kobasStaff = defaults.stringForKey(ClientSettingsKeys.kobasStaff){
+		   let kobasStaff = defaults.stringForKey(ClientSettingsKeys.kobasStaffKey){
 				self.companyId = Int(companyId)
 				self.username = username
 				self.password = password
@@ -129,7 +129,7 @@ class KobasApiClient {
 		defaults.setValue(self.companyId, forKey: ClientSettingsKeys.companyIdKey)
 		defaults.setValue(self.kobasAuthenticationCookie, forKey: ClientSettingsKeys.kobasAuthenticationCookieKey)
 		defaults.setValue(self.kobasAuthenticationExpiry, forKey: ClientSettingsKeys.kobasAuthenticationExpiryKey)
-		defaults.setValue(Mapper().toJSONString(self.kobasStaff!, prettyPrint: false), forKey: ClientSettingsKeys.kobasStaff)
+		defaults.setValue(Mapper().toJSONString(self.kobasStaff!, prettyPrint: false), forKey: ClientSettingsKeys.kobasStaffKey)
 	}
 	
 	private func clearCookies() {
