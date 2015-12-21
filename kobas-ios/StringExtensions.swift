@@ -1,5 +1,5 @@
 //
-//  StringExtentions.swift
+//  StringExtensions.swift
 //  kobas-ios
 //
 //  Created by Alex Forbes-Reed on 17/12/2015.
