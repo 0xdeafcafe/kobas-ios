@@ -34,12 +34,12 @@ class LoginViewController: UIViewController {
 		}
 		
         let loginDetails = LoginModel.init(companyIdentifier: Int(companyIdent!)!, username: username, password: password);
-		AppDelegate.kobasApiClient.authenticate(loginDetails, Completion: {(result: Bool, error: Int?) in
-			if (!result) {
+		AppDelegate.kobasApiClient.authenticate(loginDetails, Completion: {(result: KobasAuthenticationResponse?, error: Int?) in
+			if (error != nil) {
 				// look into error code
 			} else {
 				// party!
-				AppDelegate.kobasApiClient.getStaff()
+				print(result)
 			}
 		})
 	}
