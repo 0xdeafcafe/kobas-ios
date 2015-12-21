@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C48a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -9,13 +9,13 @@
         <!--Home View Controller-->
         <scene sceneID="kKE-gV-1hg">
             <objects>
-                <viewController id="PZy-sd-S53" customClass="HomeViewController" customModule="kobas_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PZy-sd-S53" customClass="HomeViewController" customModule="kobas_ios" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7TV-aO-a4O"/>
                         <viewControllerLayoutGuide type="bottom" id="xY9-CT-iOe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fSX-vV-x0t" customClass="Home">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="fSX-vV-x0t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Alex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ7-Oz-Vqe">
@@ -27,6 +27,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="WelcomeTitleLabel" destination="vZ7-Oz-Vqe" id="lWG-Yn-tJn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akp-Ju-4Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,11 +139,12 @@
                         <outlet property="CompanyIdentifierTextField" destination="lZO-PU-9zK" id="m2A-Mw-Yyv"/>
                         <outlet property="PasswordTextField" destination="U8I-wm-uBf" id="ULi-vJ-81O"/>
                         <outlet property="UsernameTextField" destination="jZj-g4-C3k" id="EBw-Eg-B1N"/>
+                        <segue destination="PZy-sd-S53" kind="show" identifier="GoToHomeViewController" id="8O0-s4-enC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357.5" y="398.5"/>
+            <point key="canvasLocation" x="312.5" y="426.5"/>
         </scene>
     </scenes>
     <resources>

@@ -9,10 +9,14 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+	
+	@IBOutlet weak var WelcomeTitleLabel: UILabel!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+		
+		WelcomeTitleLabel.text = AppDelegate.kobasApiClient.getAuthenticatedStaff()?.name
     }
     
     override func didReceiveMemoryWarning() {

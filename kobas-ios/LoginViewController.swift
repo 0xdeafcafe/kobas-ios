@@ -34,12 +34,30 @@ class LoginViewController: UIViewController {
 		}
 		
         let loginDetails = LoginModel.init(companyIdentifier: Int(companyIdent!)!, username: username, password: password);
-		AppDelegate.kobasApiClient.authenticate(loginDetails, Completion: {(result: KobasAuthenticationResponse?, error: Int?) in
-			if (error != nil) {
+		AppDelegate.kobasApiClient.authenticate(loginDetails, Completion: {(result: KobasAuthenticationResponse?, error: ErrorStatus?) in
+			if error != nil {
 				// look into error code
+				let alert = UIAlertController(title: "Unable to Login", message: "The login credentials are incorrect",
+					preferredStyle: UIAlertControllerStyle.Alert)
+				
+				switch error! {
+					case .LoginDetailsIncorrect:
+						alert.message = "The specified login details are incorrect"
+						break;
+					
+					default:
+						alert.message = "Unknown issue causing login to fail. Internal error code: " + String(error?.rawValue)
+						break;
+				}
+				
+				alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+				self.presentViewController(alert, animated: true, completion: nil)
+				
 			} else {
 				// party!
 				print(result)
+				
+				self.performSegueWithIdentifier("GoToHomeViewController", sender: sender)
 			}
 		})
 	}

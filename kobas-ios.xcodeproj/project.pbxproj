@@ -10,6 +10,10 @@
 		08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6123120EB72960AA3B06D1E9 /* Pods.framework */; };
 		BC24D6AC1C23B83F00016FC1 /* ArrayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */; };
 		BC24D6AE1C27926400016FC1 /* KobasAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24D6AD1C27926400016FC1 /* KobasAuthenticationResponse.swift */; };
+		BC24D6B11C279EEB00016FC1 /* ErrorStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24D6B01C279EEB00016FC1 /* ErrorStatus.swift */; };
+		BC24D6B51C27A8AE00016FC1 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC24D6B41C27A8AE00016FC1 /* ObjectMapper.framework */; };
+		BC24D6B81C27A9D000016FC1 /* KobasDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24D6B71C27A9D000016FC1 /* KobasDateTransform.swift */; };
+		BC24D6BA1C27B03800016FC1 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC24D6B91C27B03800016FC1 /* AlamofireObjectMapper.framework */; };
 		BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */; };
 		BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */; };
 		BC43C9161C1F08C8001DF1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9141C1F08C8001DF1C2 /* Main.storyboard */; };
@@ -21,12 +25,10 @@
 		BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */; };
 		BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */; };
 		BCE8BFD61C211E49005AB1D9 /* StringHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFD51C211E49005AB1D9 /* StringHelpers.swift */; };
-		BCE8BFDA1C225E98005AB1D9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */; };
 		BCE8BFDD1C2261B8005AB1D9 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDC1C2261B8005AB1D9 /* StringExtensions.swift */; };
 		BCE8BFDF1C226DBE005AB1D9 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDE1C226DBE005AB1D9 /* NSDateExtensions.swift */; };
 		BCE8BFE21C230636005AB1D9 /* KobasStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFE11C230636005AB1D9 /* KobasStaff.swift */; };
 		BCE8BFE41C2309F9005AB1D9 /* SingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFE31C2309F9005AB1D9 /* SingleResponse.swift */; };
-		BCE8BFE61C23B341005AB1D9 /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8BFE51C23B341005AB1D9 /* JSONJoy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,11 @@
 		6123120EB72960AA3B06D1E9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponse.swift; sourceTree = "<group>"; };
 		BC24D6AD1C27926400016FC1 /* KobasAuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasAuthenticationResponse.swift; sourceTree = "<group>"; };
+		BC24D6B01C279EEB00016FC1 /* ErrorStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorStatus.swift; sourceTree = "<group>"; };
+		BC24D6B21C27A62100016FC1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		BC24D6B41C27A8AE00016FC1 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "Pods/../build/Debug-iphoneos/ObjectMapper.framework"; sourceTree = "<group>"; };
+		BC24D6B71C27A9D000016FC1 /* KobasDateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasDateTransform.swift; sourceTree = "<group>"; };
+		BC24D6B91C27B03800016FC1 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "Pods/../build/Debug-iphoneos/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
 		BC43C90D1C1F08C8001DF1C2 /* kobas-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kobas-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC43C9101C1F08C8001DF1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -84,8 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE8BFE61C23B341005AB1D9 /* JSONJoy.framework in Frameworks */,
-				BCE8BFDA1C225E98005AB1D9 /* Alamofire.framework in Frameworks */,
+				BC24D6BA1C27B03800016FC1 /* AlamofireObjectMapper.framework in Frameworks */,
+				BC24D6B51C27A8AE00016FC1 /* ObjectMapper.framework in Frameworks */,
 				08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +126,9 @@
 		746D4A0F6105D80916B03918 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC24D6B91C27B03800016FC1 /* AlamofireObjectMapper.framework */,
+				BC24D6B41C27A8AE00016FC1 /* ObjectMapper.framework */,
+				BC24D6B21C27A62100016FC1 /* SwiftyJSON.framework */,
 				BCE8BFE51C23B341005AB1D9 /* JSONJoy.framework */,
 				BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */,
 				BCE8BFD71C225DCC005AB1D9 /* Alamofire.framework */,
@@ -126,6 +136,22 @@
 				6123120EB72960AA3B06D1E9 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC24D6AF1C279EDA00016FC1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BC24D6B01C279EEB00016FC1 /* ErrorStatus.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
+		BC24D6B61C27A9B500016FC1 /* CustomTransforms */ = {
+			isa = PBXGroup;
+			children = (
+				BC24D6B71C27A9D000016FC1 /* KobasDateTransform.swift */,
+			);
+			name = CustomTransforms;
 			sourceTree = "<group>";
 		};
 		BC43C9041C1F08C8001DF1C2 = {
@@ -153,6 +179,7 @@
 		BC43C90F1C1F08C8001DF1C2 /* kobas-ios */ = {
 			isa = PBXGroup;
 			children = (
+				BC24D6B61C27A9B500016FC1 /* CustomTransforms */,
 				BCE8BFDB1C2261AE005AB1D9 /* Extensions */,
 				BCE8BFD41C211E3C005AB1D9 /* Helpers */,
 				BC5C66F31C20FF73009FD7A6 /* Api */,
@@ -205,6 +232,7 @@
 		BC5C66F31C20FF73009FD7A6 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				BC24D6AF1C279EDA00016FC1 /* Enums */,
 				BCE8BFE01C230624005AB1D9 /* Models */,
 				BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */,
 			);
@@ -422,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */,
+				BC24D6B11C279EEB00016FC1 /* ErrorStatus.swift in Sources */,
 				BC24D6AE1C27926400016FC1 /* KobasAuthenticationResponse.swift in Sources */,
 				BC24D6AC1C23B83F00016FC1 /* ArrayResponse.swift in Sources */,
 				BCE8BFDF1C226DBE005AB1D9 /* NSDateExtensions.swift in Sources */,
@@ -433,6 +462,7 @@
 				BC43C9111C1F08C8001DF1C2 /* AppDelegate.swift in Sources */,
 				BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */,
 				BCE8BFE21C230636005AB1D9 /* KobasStaff.swift in Sources */,
+				BC24D6B81C27A9D000016FC1 /* KobasDateTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

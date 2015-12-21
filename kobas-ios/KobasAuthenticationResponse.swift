@@ -7,28 +7,32 @@
 //
 
 import Foundation
-import JSONJoy
+import ObjectMapper
 
-struct KobasAuthenticationResponse : JSONJoy {
-	var id : Int
-	var name : String
-	var staffId : Int
-	var username : String
-	var level : Int
-	var loginFailed : Int
-	var lastLogin : NSDate
-	var lockedOut : Bool
-	var lockedUntil : NSDate
+class KobasAuthenticationResponse : Mappable {
+	var id : Int?
+	var name : String?
+	var staffId : Int?
+	var username : String?
+	var level : Int?
+	var loginFailed : Int?
+	var lastLogin : NSDate?
+	var lockedOut : Bool?
+	var lockedUntil : NSDate?
 	
-	init(_ decoder: JSONDecoder) {
-		self.id = decoder["id"].integer!
-		self.name = decoder["name"].string!
-		self.staffId = decoder["staffid"].integer!
-		self.username = decoder["username"].string!
-		self.level = decoder["level"].integer!
-		self.loginFailed = decoder["loginfailed"].integer!
-		self.lastLogin = NSDate.dateFromString(decoder["lastlogin"].string!, dateFormatter: nil)
-		self.lockedOut = decoder["lockedout"].bool
-		self.lockedUntil = NSDate.dateFromString(decoder["lockeduntil"].string!, dateFormatter: nil)
+	required init?(_ map: Map) {
+		
+	}
+	
+	func mapping(map: Map) {
+		id				<- map["id"]
+		name			<- map["name"]
+		staffId			<- map["staffid"]
+		username		<- map["username"]
+		level			<- map["level"]
+		loginFailed		<- map["loginfailed"]
+		lastLogin		<- (map["lastlogin"], KobasDateTransform())
+		lockedOut		<- map["lockedout"]
+		lockedUntil     <- (map["lockeduntil"], KobasDateTransform())
 	}
 }

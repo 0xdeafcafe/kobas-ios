@@ -7,20 +7,20 @@
 //
 
 import Foundation
-import JSONJoy
+import ObjectMapper
 
-struct SingleResponse<T : JSONJoy> : JSONJoy {
+class SingleResponse<T : Mappable> : Mappable {
 	var sessionExpired : Bool?
 	var success : Bool?
 	var data : T?
 	
-	init() {
+	required init?(_ map: Map) {
 		
 	}
 	
-	init(_ decoder: JSONDecoder) {
-		sessionExpired = decoder["session_expired"].bool
-		success = decoder["success"].bool
-		data = T(decoder["data"])
+	func mapping(map: Map) {
+		sessionExpired	<- map["sessionexpired"]
+		success			<- map["success"]
+		data			<- map["data"]
 	}
 }

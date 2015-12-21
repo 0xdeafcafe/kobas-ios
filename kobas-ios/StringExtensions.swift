@@ -12,4 +12,13 @@ extension String {
 	func contains(value : String) -> Bool {
 		return value.rangeOfString(value) != nil
 	}
+	
+	static func stringFromDate(date: NSDate, var dateFormatter : NSDateFormatter?) -> String {
+		if dateFormatter == nil {
+			dateFormatter = NSDateFormatter()
+		}
+		
+		dateFormatter!.dateFormat = "yyyy-MM-dd HH:mm:ss"
+		return dateFormatter!.stringFromDate(date)
+	}
 }

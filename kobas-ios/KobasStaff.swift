@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import JSONJoy
+import ObjectMapper
 
-struct KobasStaff : JSONJoy {
+class KobasStaff : Mappable {
 	var id : Int?
 	var userId : Int?
 	var title : String?
@@ -64,59 +64,63 @@ struct KobasStaff : JSONJoy {
 	var createdAt : String?
 	var active : Bool?
 	
-	init(_ decoder: JSONDecoder) {
-		id = decoder["id"].integer
-		userId = decoder["userid"].integer
-		title = decoder["title"].string
-		firstName = decoder["firstname"].string
-		lastName = decoder["surname"].string
-		name = decoder["name"].string
-		gender = decoder["gender"].string
-		email = decoder["email"].string
-		telephone = decoder["telephone"].string
-		mobile = decoder["mobile"].string
-		address1 = decoder["address1"].string
-		address2 = decoder["address2"].string
-		town = decoder["town"].string
-		postcode = decoder["postcode"].string
-		dateOfBirth = decoder["dob"].string
-		applicationFormUrl = decoder["applicationformurl"].string
-		cvUrl = decoder["cvurl"].string
-		profileImageUrl = decoder["profileimageurl"].string
-		startDate = decoder["startdate"].string
-		endDate = decoder["enddate"].string
-		nextReview = decoder["nextreview"].string
-		nextAppraisal = decoder["nextappraisal"].string
-		bStage1 = decoder["bstage1"].bool
-		bStage2 = decoder["bstage2"].bool
-		bStage3 = decoder["bstage3"].bool
-		bStage4 = decoder["bstage4"].bool
-		bStage5 = decoder["bstage5"].bool
-		bOffered = decoder["boffered"].bool
-		bRejected = decoder["brejected"].bool
-		bNewStarter = decoder["bnewstarter"].bool
-		bLeft = decoder["bleft"].bool
-		bExported = decoder["bexported"].bool
-		bReinstated = decoder["breinstated"].bool
-		venueId = decoder["venueid"].integer
-		level = decoder["level"].integer
-		appliedJobId = decoder["appliedjobid"].integer
-		oldTitle = decoder["oldtitle"].string
-		oldFirstName = decoder["oldfirstname"].string
-		oldLastName = decoder["oldsurname"].string
-		oldEmail = decoder["oldemail"].string
-		oldTelephone = decoder["oldtelephone"].string
-		oldMobile = decoder["oldmobile"].string
-		oldAddress1 = decoder["oldaddress1"].string
-		oldAddress2 = decoder["oldaddress2"].string
-		oldTown = decoder["oldtown"].string
-		oldPostcode = decoder["oldpostcode"].string
-		acceptDate = decoder["acceptdate"].string
-		rejectDate = decoder["rejectdate"].string
-		newStarterDate = decoder["newstarterdate"].string
-		formerStaffId = decoder["formerstaffid"].integer
-		modifiedAt = decoder["m_date"].string
-		createdAt = decoder["c_date"].string
-		active = decoder["active"].bool
+	required init?(_ map: Map) {
+		
+	}
+	
+	func mapping(map: Map) {
+		id 					<- map["id"]
+		userId 				<- map["userid"]
+		title 				<- map["title"]
+		firstName 			<- map["firstname"]
+		lastName 			<- map["surname"]
+		name 				<- map["name"]
+		gender 				<- map["gender"]
+		email 				<- map["email"]
+		telephone 			<- map["telephone"]
+		mobile 				<- map["mobile"]
+		address1 			<- map["address1"]
+		address2 			<- map["address2"]
+		town 				<- map["town"]
+		postcode 			<- map["postcode"]
+		dateOfBirth 		<- map["dob"]
+		applicationFormUrl 	<- map["applicationformurl"]
+		cvUrl 				<- map["cvurl"]
+		profileImageUrl		<- map["profileimageurl"]
+		startDate 			<- map["startdate"]
+		endDate 			<- map["enddate"]
+		nextReview 			<- map["nextreview"]
+		nextAppraisal 		<- map["nextappraisal"]
+		bStage1 			<- map["bstage1"]
+		bStage2 			<- map["bstage2"]
+		bStage3 			<- map["bstage3"]
+		bStage4 			<- map["bstage4"]
+		bStage5 			<- map["bstage5"]
+		bOffered 			<- map["boffered"]
+		bRejected 			<- map["brejected"]
+		bNewStarter 		<- map["bnewstarter"]
+		bLeft 				<- map["bleft"]
+		bExported 			<- map["bexported"]
+		bReinstated 		<- map["breinstated"]
+		venueId 			<- map["venueid"]
+		level 				<- map["level"]
+		appliedJobId 		<- map["appliedjobid"]
+		oldTitle 			<- map["oldtitle"]
+		oldFirstName 		<- map["oldfirstname"]
+		oldLastName 		<- map["oldsurname"]
+		oldEmail 			<- map["oldemail"]
+		oldTelephone 		<- map["oldtelephone"]
+		oldMobile 			<- map["oldmobile"]
+		oldAddress1 		<- map["oldaddress1"]
+		oldAddress2 		<- map["oldaddress2"]
+		oldTown 			<- map["oldtown"]
+		oldPostcode 		<- map["oldpostcode"]
+		acceptDate 			<- map["acceptdate"]
+		rejectDate 			<- map["rejectdate"]
+		newStarterDate 		<- map["newstarterdate"]
+		formerStaffId 		<- map["formerstaffid"]
+		modifiedAt 			<- map["m_date"]
+		createdAt 			<- map["c_date"]
+		active 				<- map["active"]
 	}
 }

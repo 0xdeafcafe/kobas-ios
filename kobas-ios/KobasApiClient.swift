@@ -9,16 +9,17 @@
 import Foundation
 import Alamofire
 import JSONJoy
+import ObjectMapper
+import AlamofireObjectMapper
 
 class KobasApiClient {
-	private let ApiBaseUrl : String = "https://login.kobas.co.uk/"
+	private let ApiBaseUrl : String = "https://login.kobas.co.uk"
 	private let ApiLoginEndpoint : String = "data/me/log/in"
 	private let ApiStaffEndpoint : String = "data/staff"
 	
 	private var kobasAuthenticationCookie : String? = nil
 	private var kobasAuthenticationExpiry : NSDate? = nil
-	private var kobasStaffId : Int? = nil
-	private var kobasStaffHomeVenueId : Int? = nil
+	private var kobasStaff : KobasStaff? = nil
 	
 	private var companyId : Int? = nil
 	private var username : String? = nil
@@ -30,8 +31,7 @@ class KobasApiClient {
 		static let passwordKey = "ClientPassword"
 		static let kobasAuthenticationCookieKey = "ClientKobasAuthenticationCookie"
 		static let kobasAuthenticationExpiryKey = "ClientKobasAuthenticationExpiry"
-		static let kobasStaffId = "ClientKobasStaffId"
-		static let kobasStaffHomeVenueId = "ClientKobasStaffHomeVenueId"
+		static let kobasStaff = "ClientKobasStaff"
 	}
 	
 	init() {
@@ -43,47 +43,43 @@ class KobasApiClient {
 		   let password = defaults.stringForKey(ClientSettingsKeys.passwordKey),
 		   let kobasAuthenticationCookie = defaults.stringForKey(ClientSettingsKeys.kobasAuthenticationCookieKey),
 		   let kobasAuthenticationExpiry = defaults.stringForKey(ClientSettingsKeys.kobasAuthenticationExpiryKey),
-		   let kobasStaffId = defaults.stringForKey(ClientSettingsKeys.kobasStaffId),
-		   let kobasStaffHomeVenueId = defaults.stringForKey(ClientSettingsKeys.kobasStaffHomeVenueId) {
+		   let kobasStaff = defaults.stringForKey(ClientSettingsKeys.kobasStaff){
 				self.companyId = Int(companyId)
 				self.username = username
 				self.password = password
 				self.kobasAuthenticationCookie = kobasAuthenticationCookie
 				self.kobasAuthenticationExpiry = NSDate.dateFromString(kobasAuthenticationExpiry, dateFormatter: nil)
-				self.kobasStaffId = Int(kobasStaffId)
-				self.kobasStaffHomeVenueId = Int(kobasStaffHomeVenueId)
+				self.kobasStaff = Mapper<KobasStaff>().map(kobasStaff)
 		}
 	}
 	
-	func getStaff(Completion: (result: ArrayResponse<KobasStaff>, error: Int?) -> ()) -> Void {
+	func getStaff(Completion: (result: Array<KobasStaff>?, error: ErrorStatus?) -> ()) -> Void {
 		self.clearCookies()
 		
 		let headers = [
-			"Cookie": "KOBAS=" + self.kobasAuthenticationCookie!,
+			"Cookie": self.kobasAuthenticationCookie!,
 			"Accept": "application/json"
 		]
 		
-		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint, headers: headers).responseJSON { response in
-			let x = ArrayResponse<KobasStaff>(JSONDecoder(response.data!))
-			Completion(result: x, error: nil)
+		Alamofire.request(.GET, String(format: "%@/%@", ApiBaseUrl, ApiStaffEndpoint), headers: headers).responseObject { (response: Response<ArrayResponse<KobasStaff>, NSError>) in
+			Completion(result: response.result.value!.data, error: nil)
 		}
 	}
 	
-	func getStaff(staffId : Int, Completion: (result: SingleResponse<KobasStaff>, error: Int?) -> ()) -> Void {
+	func getStaff(staffId : Int, Completion: (result: KobasStaff?, error: ErrorStatus?) -> ()) -> Void {
 		self.clearCookies()
 		
 		let headers = [
-			"Cookie": "KOBAS=" + self.kobasAuthenticationCookie!,
+			"Cookie": self.kobasAuthenticationCookie!,
 			"Accept": "application/json"
 		]
 		
-		Alamofire.request(.GET, ApiBaseUrl + ApiStaffEndpoint + "/" + String(staffId), headers: headers).responseJSON { response in
-			let x = SingleResponse<KobasStaff>(JSONDecoder(response.data!))
-			Completion(result: x, error: nil)
+		Alamofire.request(.GET, String(format: "%@/%@/%d", ApiBaseUrl, ApiStaffEndpoint, staffId), headers: headers).responseObject { (response: Response<SingleResponse<KobasStaff>, NSError>) in
+			Completion(result: response.result.value!.data, error: nil)
 		}
 	}
 	
-	func authenticate(loginModel: LoginModel, Completion: (result: KobasAuthenticationResponse?, error: Int?) -> ()) -> Void {
+	func authenticate(loginModel: LoginModel, Completion: (result: KobasAuthenticationResponse?, error: ErrorStatus?) -> ()) -> Void {
 		self.clearCookies()
 		
 		let params = [
@@ -92,31 +88,35 @@ class KobasApiClient {
 			"password": loginModel.password
 		]
 		
-		Alamofire.request(.POST, ApiBaseUrl + ApiLoginEndpoint, parameters: params).responseJSON { response in
+		Alamofire.request(.POST, String(format: "%@/%@", ApiBaseUrl, ApiLoginEndpoint), parameters: params).responseObject { (response: Response<KobasAuthenticationResponse, NSError>) in
 			if response.response?.statusCode != 200 {
-				Completion(result: nil, error: 0)
+				Completion(result: nil, error: ErrorStatus.LoginDetailsIncorrect)
+				return
 			}
 			
 			let kobasCookie = response.response?.allHeaderFields["Set-Cookie"] as? String
-			let authenticationResponseParsed = KobasAuthenticationResponse(JSONDecoder(response.data!))
+			print(String(response.data))
 			
 			self.username = loginModel.username
 			self.password = loginModel.password
 			self.companyId = loginModel.companyIdentifier
-			self.kobasStaffId = authenticationResponseParsed.staffId
 			self.kobasAuthenticationCookie = kobasCookie
 			self.kobasAuthenticationExpiry =  NSDate().dateByAddingTimeInterval(NSTimeInterval(3500))
-			self.getStaff(self.kobasStaffId!, Completion: { (result : SingleResponse<KobasStaff>, error) -> () in
+			self.getStaff(response.result.value!.staffId!, Completion: { (result : KobasStaff?, error : ErrorStatus?) -> () in
 				if error != nil {
-					// TODO: handle this
+					Completion(result: nil, error: error)
 				}
 				
-				self.kobasStaffHomeVenueId = result.data!.venueId
+				self.kobasStaff = result!
 				self.saveUserData()
 				
-				Completion(result: authenticationResponseParsed, error: nil)
+				Completion(result: response.result.value!, error: nil)
 			})
 		}
+	}
+	
+	func getAuthenticatedStaff() -> KobasStaff? {
+		return self.kobasStaff
 	}
 	
 	// Private Functions
@@ -129,8 +129,7 @@ class KobasApiClient {
 		defaults.setValue(self.companyId, forKey: ClientSettingsKeys.companyIdKey)
 		defaults.setValue(self.kobasAuthenticationCookie, forKey: ClientSettingsKeys.kobasAuthenticationCookieKey)
 		defaults.setValue(self.kobasAuthenticationExpiry, forKey: ClientSettingsKeys.kobasAuthenticationExpiryKey)
-		defaults.setValue(self.kobasStaffId, forKey: ClientSettingsKeys.kobasStaffId)
-		defaults.setValue(self.kobasStaffHomeVenueId, forKey: ClientSettingsKeys.kobasStaffHomeVenueId)
+		defaults.setValue(Mapper().toJSONString(self.kobasStaff!, prettyPrint: false), forKey: ClientSettingsKeys.kobasStaff)
 	}
 	
 	private func clearCookies() {
