@@ -18,16 +18,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Alex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ7-Oz-Vqe">
-                                <rect key="frame" x="20" y="28" width="335" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Kobas" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ7-Oz-Vqe">
+                                <rect key="frame" x="20" y="28" width="335" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-Q7-Jn5">
+                                <rect key="frame" x="87" y="107" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Bg9-SY-kuX"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="JAY-Y2-VYZ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Q91-bE-YrK"/>
+                                    <constraint firstAttribute="width" constant="200" id="VJD-QV-3Ck"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="XfU-u0-MS7"/>
+                                    <constraint firstAttribute="height" constant="200" id="s0E-9n-Zmn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h4O-Q7-Jn5" firstAttribute="top" secondItem="vZ7-Oz-Vqe" secondAttribute="bottom" constant="36" id="0Nl-Iu-9pr"/>
+                            <constraint firstItem="h4O-Q7-Jn5" firstAttribute="top" secondItem="vZ7-Oz-Vqe" secondAttribute="bottom" constant="30" id="4cF-ka-FVJ"/>
+                            <constraint firstItem="vZ7-Oz-Vqe" firstAttribute="top" secondItem="7TV-aO-a4O" secondAttribute="bottom" constant="8" id="ADM-Qg-f2F"/>
+                            <constraint firstItem="vZ7-Oz-Vqe" firstAttribute="trailing" secondItem="fSX-vV-x0t" secondAttribute="trailingMargin" id="VTw-T5-iBE"/>
+                            <constraint firstItem="h4O-Q7-Jn5" firstAttribute="centerX" secondItem="vZ7-Oz-Vqe" secondAttribute="centerX" id="cVb-3l-Vlc"/>
+                            <constraint firstItem="vZ7-Oz-Vqe" firstAttribute="centerX" secondItem="fSX-vV-x0t" secondAttribute="centerX" id="nfP-WF-9wi"/>
+                            <constraint firstItem="vZ7-Oz-Vqe" firstAttribute="top" secondItem="7TV-aO-a4O" secondAttribute="bottom" constant="8" id="q1p-Nu-Vdb"/>
+                            <constraint firstItem="vZ7-Oz-Vqe" firstAttribute="leading" secondItem="fSX-vV-x0t" secondAttribute="leadingMargin" id="vQR-jB-0BB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Nl-Iu-9pr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="ProfilePictureImageView" destination="h4O-Q7-Jn5" id="qNM-Xt-nOu"/>
                         <outlet property="WelcomeTitleLabel" destination="vZ7-Oz-Vqe" id="lWG-Yn-tJn"/>
                     </connections>
                 </viewController>
