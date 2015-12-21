@@ -21,8 +21,8 @@
 		BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */; };
 		BCE8BFD61C211E49005AB1D9 /* StringHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFD51C211E49005AB1D9 /* StringHelpers.swift */; };
 		BCE8BFDA1C225E98005AB1D9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */; };
-		BCE8BFDD1C2261B8005AB1D9 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDC1C2261B8005AB1D9 /* StringExtentions.swift */; };
-		BCE8BFDF1C226DBE005AB1D9 /* NSDateExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */; };
+		BCE8BFDD1C2261B8005AB1D9 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDC1C2261B8005AB1D9 /* StringExtensions.swift */; };
+		BCE8BFDF1C226DBE005AB1D9 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFDE1C226DBE005AB1D9 /* NSDateExtensions.swift */; };
 		BCE8BFE21C230636005AB1D9 /* KobasStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFE11C230636005AB1D9 /* KobasStaff.swift */; };
 		BCE8BFE41C2309F9005AB1D9 /* SingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8BFE31C2309F9005AB1D9 /* SingleResponse.swift */; };
 		BCE8BFE61C23B341005AB1D9 /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8BFE51C23B341005AB1D9 /* JSONJoy.framework */; };
@@ -69,8 +69,8 @@
 		BCE8BFD51C211E49005AB1D9 /* StringHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelpers.swift; sourceTree = "<group>"; };
 		BCE8BFD71C225DCC005AB1D9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		BCE8BFD91C225E98005AB1D9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		BCE8BFDC1C2261B8005AB1D9 /* StringExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
-		BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtentions.swift; sourceTree = "<group>"; };
+		BCE8BFDC1C2261B8005AB1D9 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		BCE8BFDE1C226DBE005AB1D9 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
 		BCE8BFE11C230636005AB1D9 /* KobasStaff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasStaff.swift; sourceTree = "<group>"; };
 		BCE8BFE31C2309F9005AB1D9 /* SingleResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResponse.swift; sourceTree = "<group>"; };
 		BCE8BFE51C23B341005AB1D9 /* JSONJoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONJoy.framework; path = "Pods/../build/Debug-iphoneos/JSONJoy.framework"; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		BC43C90F1C1F08C8001DF1C2 /* kobas-ios */ = {
 			isa = PBXGroup;
 			children = (
-				BCE8BFDB1C2261AE005AB1D9 /* Extentions */,
+				BCE8BFDB1C2261AE005AB1D9 /* Extensions */,
 				BCE8BFD41C211E3C005AB1D9 /* Helpers */,
 				BC5C66F31C20FF73009FD7A6 /* Api */,
 				BC5C66F01C20F833009FD7A6 /* Controllers */,
@@ -217,13 +217,13 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		BCE8BFDB1C2261AE005AB1D9 /* Extentions */ = {
+		BCE8BFDB1C2261AE005AB1D9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BCE8BFDC1C2261B8005AB1D9 /* StringExtentions.swift */,
-				BCE8BFDE1C226DBE005AB1D9 /* NSDateExtentions.swift */,
+				BCE8BFDC1C2261B8005AB1D9 /* StringExtensions.swift */,
+				BCE8BFDE1C226DBE005AB1D9 /* NSDateExtensions.swift */,
 			);
-			name = Extentions;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		BCE8BFE01C230624005AB1D9 /* Models */ = {
@@ -420,9 +420,9 @@
 			files = (
 				BC43C9131C1F08C8001DF1C2 /* LoginViewController.swift in Sources */,
 				BC24D6AC1C23B83F00016FC1 /* ArrayResponse.swift in Sources */,
-				BCE8BFDF1C226DBE005AB1D9 /* NSDateExtentions.swift in Sources */,
+				BCE8BFDF1C226DBE005AB1D9 /* NSDateExtensions.swift in Sources */,
 				BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */,
-				BCE8BFDD1C2261B8005AB1D9 /* StringExtentions.swift in Sources */,
+				BCE8BFDD1C2261B8005AB1D9 /* StringExtensions.swift in Sources */,
 				BCE8BFE41C2309F9005AB1D9 /* SingleResponse.swift in Sources */,
 				BCE8BFD61C211E49005AB1D9 /* StringHelpers.swift in Sources */,
 				BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */,
