@@ -16,6 +16,7 @@ class KobasApiClient {
 	private let ApiBaseUrl : String = "https://login.kobas.co.uk"
 	private let ApiLoginEndpoint : String = "data/me/log/in"
 	private let ApiStaffEndpoint : String = "data/staff"
+	private let ApiUserLevelEndpoint : String = "data/user-level"
 	
 	private var kobasAuthenticationCookie : String? = nil
 	private var kobasAuthenticationExpiry : NSDate? = nil
@@ -76,6 +77,19 @@ class KobasApiClient {
 		
 		Alamofire.request(.GET, String(format: "%@/%@/%d", ApiBaseUrl, ApiStaffEndpoint, staffId), headers: headers).responseObject { (response: Response<SingleResponse<KobasStaff>, NSError>) in
 			Completion(result: response.result.value!.data, error: nil)
+		}
+	}
+	
+	func getUserLevels(Completion: (result: [KobasUserLevel]?, error: ErrorStatus?) -> ()) -> Void {
+		self.clearCookies()
+		
+		let headers = [
+			"Cookie": self.kobasAuthenticationCookie!,
+			"Accept": "application/json"
+		]
+		
+		Alamofire.request(.GET, String(format: "%@/%@", ApiBaseUrl, ApiUserLevelEndpoint), headers: headers).responseArray {(response: Response<[KobasUserLevel], NSError>) in
+			Completion(result: response.result.value, error: nil)
 		}
 	}
 	

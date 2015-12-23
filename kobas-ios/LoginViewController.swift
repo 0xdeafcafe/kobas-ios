@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  kobas-ios
 //
 //  Created by Alex Forbes-Reed on 14/12/2015.
@@ -54,10 +54,8 @@ class LoginViewController: UIViewController {
 				self.presentViewController(alert, animated: true, completion: nil)
 				
 			} else {
-				// party!
-				print(result)
-				
-				self.performSegueWithIdentifier("GoToHomeViewController", sender: sender)
+				let appDelegate : AppDelegate! = UIApplication.sharedApplication().delegate as! AppDelegate
+				appDelegate.loginSuccessful()
 			}
 		})
 	}

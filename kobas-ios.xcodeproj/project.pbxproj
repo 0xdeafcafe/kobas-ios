@@ -21,6 +21,10 @@
 		BC43C91B1C1F08C8001DF1C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC43C9191C1F08C8001DF1C2 /* LaunchScreen.storyboard */; };
 		BC43C9261C1F08C8001DF1C2 /* kobas_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9251C1F08C8001DF1C2 /* kobas_iosTests.swift */; };
 		BC43C9311C1F08C8001DF1C2 /* kobas_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C9301C1F08C8001DF1C2 /* kobas_iosUITests.swift */; };
+		BC44772C1C28469000E3EC8F /* KobasUserLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44772B1C28469000E3EC8F /* KobasUserLevel.swift */; };
+		BC44772E1C28F44700E3EC8F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC44772D1C28F44700E3EC8F /* Alamofire.framework */; };
+		BC4477321C28F7CA00E3EC8F /* ECSlidingViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4477311C28F7CA00E3EC8F /* ECSlidingViewController.framework */; };
+		BC4477341C291BE900E3EC8F /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4477331C291BE900E3EC8F /* SlidingViewController.swift */; };
 		BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */; };
 		BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */; };
 		BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */; };
@@ -72,6 +76,13 @@
 		BC43C92C1C1F08C8001DF1C2 /* kobas-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobas-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC43C9301C1F08C8001DF1C2 /* kobas_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kobas_iosUITests.swift; sourceTree = "<group>"; };
 		BC43C9321C1F08C8001DF1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC44772B1C28469000E3EC8F /* KobasUserLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasUserLevel.swift; sourceTree = "<group>"; };
+		BC44772D1C28F44700E3EC8F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		BC44772F1C28F45600E3EC8F /* TheSidebarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TheSidebarController.framework; path = "Pods/../build/Debug-iphoneos/TheSidebarController.framework"; sourceTree = "<group>"; };
+		BC4477311C28F7CA00E3EC8F /* ECSlidingViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ECSlidingViewController.framework; path = "Pods/../build/Debug-iphoneos/ECSlidingViewController.framework"; sourceTree = "<group>"; };
+		BC4477331C291BE900E3EC8F /* SlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingViewController.swift; sourceTree = "<group>"; };
+		BC4477351C291C1C00E3EC8F /* kobas-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kobas-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		BC4477361C291DC300E3EC8F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BC5C66ED1C20928B009FD7A6 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC5C66F41C20FF84009FD7A6 /* KobasApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobasApiClient.swift; sourceTree = "<group>"; };
@@ -91,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4477321C28F7CA00E3EC8F /* ECSlidingViewController.framework in Frameworks */,
+				BC44772E1C28F44700E3EC8F /* Alamofire.framework in Frameworks */,
 				BC24D6BA1C27B03800016FC1 /* AlamofireObjectMapper.framework in Frameworks */,
 				BC24D6B51C27A8AE00016FC1 /* ObjectMapper.framework in Frameworks */,
 				08694C9CB4BF8A9EBD8C5BEE /* Pods.framework in Frameworks */,
@@ -126,6 +139,9 @@
 		746D4A0F6105D80916B03918 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC4477311C28F7CA00E3EC8F /* ECSlidingViewController.framework */,
+				BC44772F1C28F45600E3EC8F /* TheSidebarController.framework */,
+				BC44772D1C28F44700E3EC8F /* Alamofire.framework */,
 				BC24D6B91C27B03800016FC1 /* AlamofireObjectMapper.framework */,
 				BC24D6B41C27A8AE00016FC1 /* ObjectMapper.framework */,
 				BC24D6B21C27A62100016FC1 /* SwiftyJSON.framework */,
@@ -190,6 +206,7 @@
 				BC43C9171C1F08C8001DF1C2 /* Assets.xcassets */,
 				BC43C9191C1F08C8001DF1C2 /* LaunchScreen.storyboard */,
 				BC43C91C1C1F08C8001DF1C2 /* Info.plist */,
+				BC4477351C291C1C00E3EC8F /* kobas-ios-Bridging-Header.h */,
 			);
 			path = "kobas-ios";
 			sourceTree = "<group>";
@@ -225,6 +242,8 @@
 			children = (
 				BC43C9121C1F08C8001DF1C2 /* LoginViewController.swift */,
 				BC5C66F11C20F845009FD7A6 /* HomeViewController.swift */,
+				BC4477331C291BE900E3EC8F /* SlidingViewController.swift */,
+				BC4477361C291DC300E3EC8F /* MenuViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +282,7 @@
 				BCE8BFE31C2309F9005AB1D9 /* SingleResponse.swift */,
 				BC24D6AB1C23B83F00016FC1 /* ArrayResponse.swift */,
 				BC24D6AD1C27926400016FC1 /* KobasAuthenticationResponse.swift */,
+				BC44772B1C28469000E3EC8F /* KobasUserLevel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -456,6 +476,7 @@
 				BCE8BFDF1C226DBE005AB1D9 /* NSDateExtensions.swift in Sources */,
 				BC5C66EE1C20928B009FD7A6 /* LoginModel.swift in Sources */,
 				BCE8BFDD1C2261B8005AB1D9 /* StringExtensions.swift in Sources */,
+				BC44772C1C28469000E3EC8F /* KobasUserLevel.swift in Sources */,
 				BCE8BFE41C2309F9005AB1D9 /* SingleResponse.swift in Sources */,
 				BCE8BFD61C211E49005AB1D9 /* StringHelpers.swift in Sources */,
 				BC5C66F51C20FF84009FD7A6 /* KobasApiClient.swift in Sources */,
@@ -463,6 +484,7 @@
 				BC5C66F21C20F845009FD7A6 /* HomeViewController.swift in Sources */,
 				BCE8BFE21C230636005AB1D9 /* KobasStaff.swift in Sources */,
 				BC24D6B81C27A9D000016FC1 /* KobasDateTransform.swift in Sources */,
+				BC4477341C291BE900E3EC8F /* SlidingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
